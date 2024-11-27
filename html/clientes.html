@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h4>Gestión de Clientes</h4>
+
+        <!-- Barra de búsqueda -->
+        <div class="input-field">
+            <input id="search" type="text" placeholder="Buscar cliente por nombre o ID">
+            <label for="search">Buscar Cliente</label>
+        </div>
+
+        <!-- Tabla de clientes -->
+        <div class="table-container">
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila de cliente ejemplo -->
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>Bogotá Tunjuelito</td>
+                        <td>987654321</td>
+                        <td>juanperez@gmail.com</td>
+                        <td>
+                            <a href="#!" class="btn blue">Ver Detalles</a>
+                            <a href="#!" class="btn green">Modificar</a>
+                            <a href="#!" class="btn red modal-trigger" href="#confirmModal">Eliminar</a>
+                            <a href="#!" class="btn blue">Historial de Compras</a>
+                        </td>
+                    </tr>
+                    <!-- Otro cliente -->
+                    <tr>
+                        <td>Ana López</td>
+                        <td>Sogamoso Centro</td>
+                        <td>987654322</td>
+                        <td>analopez@gmail.com</td>
+                        <td>
+                            <a href="#!" class="btn blue">Ver Detalles</a>
+                            <a href="#!" class="btn green">Modificar</a>
+                            <a href="#!" class="btn red modal-trigger" href="#confirmModal">Eliminar</a>
+                            <a href="#!" class="btn blue">Historial de Compras</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botón para agregar cliente -->
+        <a href="#!" class="btn large green modal-trigger" href="#addClientModal">Agregar Cliente</a>
+
+        <!-- Modal para confirmar eliminación -->
+        <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-header">Confirmar Eliminación</h4>
+                <p>¿Está seguro de que desea eliminar este cliente?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                <a href="#!" class="modal-close waves-effect waves-red btn-flat">Eliminar</a>
+            </div>
+        </div>
+
+        <!-- Modal para agregar cliente -->
+        <div id="addClientModal" class="modal">
+            <div class="modal-content">
+                <h4>Agregar Cliente</h4>
+                <form action="#">
+
+                    <div class="input-field">
+                        <input id="clientName" type="text" required>
+                        <label for="clientName">Nombre del Cliente</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input id="clientAddress" type="text" required>
+                        <label for="clientAddress">Dirección</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input id="clientPhone" type="tel" required>
+                        <label for="clientPhone">Teléfono</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input id="clientEmail" type="email" required>
+                        <label for="clientEmail">Correo Electrónico</label>
+                    </div>
+
+                    <button type="submit" class="btn green">Agregar Cliente</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+        });
+    </script>
+
+</body>
+</html>

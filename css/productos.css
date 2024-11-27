@@ -1,0 +1,57 @@
+body {
+    background-color: #fbfff1; /* Blanco sucio */
+    font-family: Arial, sans-serif;
+}
+
+h4 {
+    color: #090c9b; /* Azul oscuro */
+}
+
+.input-field input {
+    border-color: #3066be; /* Azul intermedio */
+}
+
+.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.btn.blue {
+    background-color: #090c9b; /* Azul oscuro */
+}
+
+.btn.green {
+    background-color: #3066be; /* Azul intermedio */
+}
+
+.btn.red {
+    background-color: #f44336; /* Rojo */
+}
+
+.btn.large {
+    font-size: 1.2rem;
+}
+
+.table-container {
+    margin-top: 30px;
+}
+
+.modal-header {
+    background-color: #3066be; /* Azul intermedio */
+    color: white;
+}
+
+.modal-footer .btn-flat {
+    background-color: #3c3744; /* Color oscuro */
+    color: white;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+/* Estilo para los botones de las filas */
+.btn-modal {
+    margin: 5px;
+}

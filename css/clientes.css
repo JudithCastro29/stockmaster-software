@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    background-color: #fbfff1; /* Blanco sucio */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    color: #090c9b; /* Azul oscuro */
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Barra de búsqueda */
+.input-field input {
+    border-color: #3066be; /* Azul intermedio */
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.input-field label {
+    color: #3c3744; /* Color oscuro para el texto */
+}
+
+/* Botones */
+.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.btn.blue {
+    background-color: #090c9b; /* Azul oscuro */
+}
+
+.btn.green {
+    background-color: #3066be; /* Azul intermedio */
+}
+
+.btn.red {
+    background-color: #f44336; /* Rojo */
+}
+
+.btn:hover {
+    filter: brightness(0.9);
+}
+
+.btn.large {
+    font-size: 1.2rem;
+}
+
+/* Modal */
+.modal-header {
+    background-color: #3066be; /* Azul intermedio */
+    color: white;
+}
+
+.modal-footer .btn-flat {
+    background-color: #3c3744; /* Color oscuro */
+    color: white;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #090c9b; /* Azul oscuro */
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #ffffff;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+table td a {
+    color: white;
+    text-decoration: none;
+}
+
+table td a:hover {
+    filter: brightness(0.8);
+}
+
+/* Modal de confirmación */
+.modal-content {
+    background-color: #f7f7f7;
+    color: #3c3744;
+}
+
+.modal-footer .btn-flat {
+    background-color: #3c3744; /* Color oscuro */
+    color: white;
+}
+
+/* Formulario de agregar cliente */
+form .input-field {
+    margin-bottom: 20px;
+}
+
+form .input-field input {
+    border: 1px solid #3066be; /* Azul intermedio */
+    border-radius: 5px;
+}
+
+form .input-field label {
+    color: #090c9b; /* Azul oscuro */
+}
+
+button[type="submit"] {
+    background-color: #30f04a; /* Verde */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #4CAF50; /* Verde más oscuro */
+}
+
+/* Modal agregar cliente */
+.modal {
+    border-radius: 10px;
+}

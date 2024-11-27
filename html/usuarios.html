@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - STOCK MASTER</title>
+    <link rel="stylesheet" href="css/usuarios.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h4>Gestión de Usuarios</h4>
+
+        <!-- Barra de búsqueda -->
+        <div class="input-field">
+            <input id="search" type="text" placeholder="Buscar usuario por nombre o rol">
+            <label for="search">Buscar Usuario</label>
+        </div>
+
+        <!-- Tabla de usuarios -->
+        <div class="table-container">
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila de usuario ejemplo -->
+                    <tr>
+                        <td>Lorena Castro</td>
+                        <td>Administrador</td>
+                        <td>Activo</td>
+                        <td>
+                            <a href="#!" class="btn blue">Modificar</a>
+                            <a href="#!" class="btn red">Eliminar</a>
+                            <a href="#!" class="btn yellow">Asignar Rol</a>
+                        </td>
+                    </tr>
+                    <!-- Otro usuario -->
+                    <tr>
+                        <td>Maria Rodriguez</td>
+                        <td>Vendedor</td>
+                        <td>Activo</td>
+                        <td>
+                            <a href="#!" class="btn blue">Modificar</a>
+                            <a href="#!" class="btn red">Eliminar</a>
+                            <a href="#!" class="btn yellow">Asignar Rol</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal para agregar usuario -->
+        <div id="addUserModal" class="modal">
+            <div class="modal-content">
+                <h4>Agregar Nuevo Usuario</h4>
+                <form action="#">
+                    <div class="input-field">
+                        <input id="nombre" type="text" required>
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="email" type="email" required>
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+                    <div class="input-field">
+                        <select id="rol" required>
+                            <option value="" disabled selected>Seleccionar Rol</option>
+                            <option value="admin">Administrador</option>
+                            <option value="vendedor">Vendedor</option>
+                        </select>
+                        <label>Rol</label>
+                    </div>
+                    <button class="btn blue" type="submit">Agregar Usuario</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            </div>
+        </div>
+
+        <!-- Botón para abrir el modal de agregar usuario -->
+        <a href="#addUserModal" class="btn blue modal-trigger">Agregar Usuario</a>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals);
+            var selects = document.querySelectorAll('select');
+            M.FormSelect.init(selects);
+        });
+    </script>
+
+</body>
+</html>

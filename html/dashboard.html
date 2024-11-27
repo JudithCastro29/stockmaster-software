@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla Principal - STOCK MASTER</title>
+    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Ruta al CSS corregida -->
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Título -->
+        <h1 class="title">Bienvenido a STOCK MASTER</h1>
+        <p>Selecciona una opción del menú para gestionar tu inventario y otras áreas del sistema.</p>
+
+        <!-- NAVEGAR ENTRE PANTALLAS -->
+        <div class="dashboard-grid">
+            <div class="card">
+                <a href="../html/productos.html">Productos</a> <!-- Enlace a la pantalla de productos -->
+            </div>
+            <div class="card">
+                <a href="../html/clientes.html">Clientes</a> <!-- Enlace a la pantalla de clientes -->
+            </div>
+            <div class="card">
+                <a href="../html/facturas.html">Facturas</a> <!-- Enlace a la pantalla de facturas -->
+            </div>
+            <div class="card">
+                <a href="../html/usuarios.html">Usuarios</a> <!-- Enlace a la pantalla de usuarios -->
+            </div>
+            <div class="card">
+                <a href="../html/alistamiento.html">Alistamiento</a> <!-- Enlace a la pantalla de alistamiento -->
+            </div>
+        </div>
+
+        <!-- CERRAR SESION -->
+        <footer>
+            <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </footer>
+    </div>
+
+    <script>
+        function cerrarSesion() {
+            alert("Sesión cerrada.");
+          
+        }
+    </script>
+</body>
+</html>
+
+
+
